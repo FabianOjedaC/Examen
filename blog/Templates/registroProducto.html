@@ -1,0 +1,6 @@
+<form  role="form"  enctype="multipart/form-data"  method="POST" class="formu">
+    <h1>Registro Producto</h1>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Enviar" class="btn-enviar">
+  </form>

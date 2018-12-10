@@ -38,7 +38,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'rest_framework',
+
 ]
+
+REST_FRAMEWORK = {
+
+'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+
+'PAGE_SIZE': 10
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -120,3 +129,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_ROOT = os.path.join(BASE_DIR)
+
+MEDIA_URL = '/media/'
+
+
+SOCIAL_AUTH_FACEBOOK_KEY='285164402116490'
+SOCIAL_AUTH_FACEBOOK_SECRET='0fb508ac5e53459f0e28dd7ae7b88f76'
